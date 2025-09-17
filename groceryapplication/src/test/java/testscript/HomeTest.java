@@ -10,7 +10,7 @@ import base.TestngBase;
 import utilities.ExcelUtility;
 
 public class HomeTest extends TestngBase {
-	@Test
+	@Test(description = "verify the logout")
 	public void verifylogout() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");// 2nd row 1st coloumn- username
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");// 2nd row 2nd coloumn - password
