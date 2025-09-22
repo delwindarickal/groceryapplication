@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -21,6 +22,11 @@ public void verifyloginwithValidCredentials() throws IOException {
 	password.sendKeys(passwordValue);
 	WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
 	loginbutton.click();
+	
+	String expected="https://groceryapp.uniqassosiates.com/admin/home";
+	String actual=driver.getCurrentUrl();
+	Assert.assertEquals(actual, expected, "Login is not successfull with valid credentials");
+	
 }
 @Test(priority = 2, description = "verify with valid username and invalid password ")
 public void verifyloginwithValidUsernameInvalidpassword() throws IOException {
@@ -32,6 +38,10 @@ public void verifyloginwithValidUsernameInvalidpassword() throws IOException {
 	password.sendKeys(passwordValue);
 	WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
 	loginbutton.click();
+	
+	String expected = "https://groceryapp.uniqassosiates.com/admin/login";
+	String actual = driver.getCurrentUrl();
+	Assert.assertEquals(actual, expected, "Login is succuessfull with valid username and invaild password");
 	
 }
 
@@ -46,6 +56,9 @@ public void verifyloginwithInvalidusernameValidPassword() throws IOException {
 	WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
 	loginbutton.click();
 	
+	String expected = "https://groceryapp.uniqassosiates.com/admin/login";
+	String actual = driver.getCurrentUrl();
+	Assert.assertEquals(actual, expected, "Login is succuessfull with invalid username and valid password");
 }
 
 @Test(priority = 4, description = "verify with invalid username and invaild password", dataProvider = "loginProvider")
@@ -58,6 +71,10 @@ public void verifyloginwithInvalidCredentials(String usernameValue, String passw
 	password.sendKeys(passwordValue);
 	WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
 	loginbutton.click();
+	
+	String expected = "https://groceryapp.uniqassosiates.com/admin/login";
+	String actual = driver.getCurrentUrl();
+	Assert.assertEquals(actual, expected, "Login is succuessfull with invaild credentials");
 	
 }
 
