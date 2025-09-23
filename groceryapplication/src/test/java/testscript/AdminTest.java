@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.TestngBase;
@@ -43,11 +44,16 @@ public class AdminTest extends TestngBase {
 		
 		WebElement usertypedrpdown= driver.findElement(By.xpath("//select[@id='user_type']"));
 		Select select=new Select(usertypedrpdown);
-		//select.selectByValue(usertype);
+		//select.selectByVisibleText(usertype);
 		select.selectByValue("admin");
 		
 		WebElement usersave= driver.findElement(By.xpath("//button[@name='Create']"));
 		usersave.click();
+		
+		WebElement newsAlert= driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']"));
+		boolean isalertdisplayed=newsAlert.isDisplayed();
+		Assert.assertTrue(isalertdisplayed,"The News is not added");// if false message will be displayed
+		
 		
 		
 		}
@@ -83,6 +89,12 @@ public class AdminTest extends TestngBase {
 		
 		WebElement search_button_new = driver.findElement(By.xpath("//button[@name='Search']"));
 		search_button_new.click();
+		
+		WebElement newsAlert= driver.findElement(By.xpath("//h4[@class=\"card-title\" and text() ='Admin Users']"));
+		boolean isalertdisplayed=newsAlert.isDisplayed();
+		Assert.assertTrue(isalertdisplayed,"The Search was successfull");// if false message will be displayed
+		
+		
 
 	}
 	
@@ -106,6 +118,10 @@ public class AdminTest extends TestngBase {
 		
 		WebElement reset_button = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-warning']"));
 		reset_button.click();
+		
+		String expected="https://groceryapp.uniqassosiates.com/admin/list-admin";
+		String actual=driver.getCurrentUrl();
+		Assert.assertEquals(actual, expected, "Reset was not successfully done!");
 		
 	}
 	

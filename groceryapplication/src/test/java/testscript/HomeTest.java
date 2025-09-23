@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.TestngBase;
@@ -24,6 +25,10 @@ public class HomeTest extends TestngBase {
 		logout.click();
 		WebElement logoutclick=driver.findElement(By.xpath("//i[@class='ace-icon fa fa-power-off']"));
 		logoutclick.click();
+		
+		String expected="https://groceryapp.uniqassosiates.com/admin/login";
+		String actual=driver.getCurrentUrl();
+		Assert.assertEquals(actual, expected, "Logout is not successfull");
 
 	}
 }
