@@ -2,13 +2,15 @@ package testscript;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.TestngBase;
+import pages.AdminPage;
+import pages.LoginPage;
 import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
@@ -18,19 +20,29 @@ public class AdminTest extends TestngBase {
 	public void verifyAddUser() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");// 2nd row 1st coloumn- username
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");// 2nd row 2nd coloumn - password
-		WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
+		/*WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
 		username.sendKeys(usernameValue);
 		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
 		password.sendKeys(passwordValue);
 		WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
-		loginbutton.click();
+		loginbutton.click();*/
+		LoginPage login = new LoginPage(driver);
+		login.enterUsername(usernameValue);
+		login.enterPassword(passwordValue);
+		login.clickLogin();
 		
 		FakerUtility fakerUtility = new FakerUtility();
 		String randomname=fakerUtility.createRandomUserName();
 		String randompassword=fakerUtility.createRandomPassword();
 		//String usertype=ExcelUtility.getStringData(1,2, "HomePage");
-		
-		WebElement adminmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']"));
+		AdminPage admin = new AdminPage(driver);
+		admin.adminMoreInfo();;
+		admin.addnewuser();
+		admin.addNewUsername(randomname);
+		admin.enterNewPassword(randompassword);
+		admin.searchUserType();
+		admin.userSave();
+		/*WebElement adminmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']"));
 		adminmoreinfo.click();
 		
 		WebElement newuser=driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-danger']"));
@@ -50,8 +62,9 @@ public class AdminTest extends TestngBase {
 		WebElement usersave= driver.findElement(By.xpath("//button[@name='Create']"));
 		usersave.click();
 		
-		WebElement newsAlert= driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']"));
-		boolean isalertdisplayed=newsAlert.isDisplayed();
+		WebElement newsAlert= driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']"));*/
+		
+		boolean isalertdisplayed= admin.newAlert();
 		Assert.assertTrue(isalertdisplayed,"The News is not added");// if false message will be displayed
 		
 		
@@ -62,20 +75,28 @@ public class AdminTest extends TestngBase {
 	public void verifysearchuser() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");// 2nd row 1st coloumn- username
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");// 2nd row 2nd coloumn - password
-		WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
+		/*WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
 		username.sendKeys(usernameValue);
 		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
 		password.sendKeys(passwordValue);
 		WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
-		loginbutton.click();
+		loginbutton.click();*/
+		LoginPage login = new LoginPage(driver);
+		login.enterUsername(usernameValue);
+		login.enterPassword(passwordValue);
+		login.clickLogin();
 		
-		WebElement adminmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']"));
-		adminmoreinfo.click();
+		
 		
 		FakerUtility fakerUtility = new FakerUtility();
 		String randomname=fakerUtility.createRandomUserName();
 		
-		WebElement search_button = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-primary']"));
+		/*
+		 
+		 WebElement adminmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']"));
+		adminmoreinfo.click();
+		 
+		 WebElement search_button = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-primary']"));
 		search_button.click();
 		
 		WebElement search_username = driver.findElement(By.xpath("//input[@id='un']"));
@@ -88,11 +109,21 @@ public class AdminTest extends TestngBase {
 		select.selectByVisibleText("Admin");
 		
 		WebElement search_button_new = driver.findElement(By.xpath("//button[@name='Search']"));
-		search_button_new.click();
+		search_button_new.click();*/
 		
-		WebElement newsAlert= driver.findElement(By.xpath("//h4[@class=\"card-title\" and text() ='Admin Users']"));
-		boolean isalertdisplayed=newsAlert.isDisplayed();
+		
+		AdminPage admin = new AdminPage(driver);
+		admin.adminMoreInfo();
+		admin.searchButton();
+		admin.searchUserName(randomname);
+		admin.searchUserType();
+		admin.searchUser();
+		
+		//WebElement newsAlert= driver.findElement(By.xpath("//h4[@class=\"card-title\" and text() ='Admin Users']"));
+		
+		boolean isalertdisplayed=admin.searchAlert();
 		Assert.assertTrue(isalertdisplayed,"The Search was successfull");// if false message will be displayed
+	
 		
 		
 
@@ -103,7 +134,7 @@ public class AdminTest extends TestngBase {
 	public void verifyRefreshbutton() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");// 2nd row 1st coloumn- username
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");// 2nd row 2nd coloumn - password
-		WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
+		/*WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
 		username.sendKeys(usernameValue);
 		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
 		password.sendKeys(passwordValue);
@@ -117,7 +148,16 @@ public class AdminTest extends TestngBase {
 		search_button.click();
 		
 		WebElement reset_button = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-warning']"));
-		reset_button.click();
+		reset_button.click();*/
+		LoginPage login = new LoginPage(driver);
+		login.enterUsername(usernameValue);
+		login.enterPassword(passwordValue);
+		login.clickLogin();
+		
+		AdminPage admin = new AdminPage(driver);
+		admin.adminMoreInfo();
+		admin.searchButton();;
+		admin.reset();
 		
 		String expected="https://groceryapp.uniqassosiates.com/admin/list-admin";
 		String actual=driver.getCurrentUrl();

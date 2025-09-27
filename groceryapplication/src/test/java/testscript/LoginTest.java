@@ -2,8 +2,6 @@ package testscript;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -32,12 +30,11 @@ public void verifyloginwithValidCredentials() throws IOException {
 public void verifyloginwithValidUsernameInvalidpassword() throws IOException {
 	String usernameValue=ExcelUtility.getStringData(2, 0, "LoginPage");// 3rd row 1st coloumn- username
 	String passwordValue=ExcelUtility.getStringData(2, 1, "LoginPage");// 3rd row 2nd coloumn - password
-	WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
-	username.sendKeys(usernameValue);
-	WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
-	password.sendKeys(passwordValue);
-	WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
-	loginbutton.click();
+	
+	LoginPage login = new LoginPage(driver);
+	login.enterUsername(usernameValue);
+	login.enterPassword(passwordValue);
+	login.clickLogin();
 	
 	String expected = "https://groceryapp.uniqassosiates.com/admin/login";
 	String actual = driver.getCurrentUrl();
@@ -49,12 +46,11 @@ public void verifyloginwithValidUsernameInvalidpassword() throws IOException {
 public void verifyloginwithInvalidusernameValidPassword() throws IOException {
 	String usernameValue=ExcelUtility.getStringData(3, 0, "LoginPage");// 4th row 1st coloumn- username
 	String passwordValue=ExcelUtility.getStringData(3, 1, "LoginPage");// 4th row 2nd coloumn - password
-	WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
-	username.sendKeys(usernameValue);
-	WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
-	password.sendKeys(passwordValue);
-	WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
-	loginbutton.click();
+
+	LoginPage login = new LoginPage(driver);
+	login.enterUsername(usernameValue);
+	login.enterPassword(passwordValue);
+	login.clickLogin();
 	
 	String expected = "https://groceryapp.uniqassosiates.com/admin/login";
 	String actual = driver.getCurrentUrl();
@@ -65,12 +61,11 @@ public void verifyloginwithInvalidusernameValidPassword() throws IOException {
 public void verifyloginwithInvalidCredentials(String usernameValue, String passwordValue) throws IOException {
 	//String usernameValue=ExcelUtility.getStringData(4, 0, "LoginPage");// 5th row 1st coloumn- username
 	//String passwordValue=ExcelUtility.getStringData(4, 1, "LoginPage");// 5th row 2nd coloumn - password
-	WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
-	username.sendKeys(usernameValue);
-	WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
-	password.sendKeys(passwordValue);
-	WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
-	loginbutton.click();
+
+	LoginPage login = new LoginPage(driver);
+	login.enterUsername(usernameValue);
+	login.enterPassword(passwordValue);
+	login.clickLogin();
 	
 	String expected = "https://groceryapp.uniqassosiates.com/admin/login";
 	String actual = driver.getCurrentUrl();
