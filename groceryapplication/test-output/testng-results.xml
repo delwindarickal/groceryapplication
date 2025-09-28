@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-28T00:27:56 IST" name="Default suite" finished-at="2025-09-28T00:28:05 IST" duration-ms="9398">
+  <suite started-at="2025-09-29T02:42:57 IST" name="Default suite" finished-at="2025-09-29T02:43:03 IST" duration-ms="5780">
     <groups>
     </groups>
-    <test started-at="2025-09-28T00:27:56 IST" name="Default test" finished-at="2025-09-28T00:28:05 IST" duration-ms="9398">
-      <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="intializebrowser()[pri:0, instance:testscript.LoginTest@40005471]" started-at="2025-09-28T00:27:56 IST" name="intializebrowser" finished-at="2025-09-28T00:28:01 IST" duration-ms="5278" status="PASS">
+    <test started-at="2025-09-29T02:42:57 IST" name="Default test" finished-at="2025-09-29T02:43:03 IST" duration-ms="5780">
+      <class name="testscript.NewsTest">
+        <test-method is-config="true" signature="intializebrowser()[pri:0, instance:testscript.NewsTest@5bda8e08]" started-at="2025-09-29T02:42:57 IST" name="intializebrowser" finished-at="2025-09-29T02:43:00 IST" duration-ms="2947" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializebrowser -->
-        <test-method signature="verifyloginwithValidUsernameInvalidpassword()[pri:2, instance:testscript.LoginTest@40005471]" started-at="2025-09-28T00:28:01 IST" name="verifyloginwithValidUsernameInvalidpassword" description="verify with valid username and invalid password " finished-at="2025-09-28T00:28:05 IST" duration-ms="4019" status="PASS">
+        <test-method signature="verifyAddNews()[pri:0, instance:testscript.NewsTest@5bda8e08]" started-at="2025-09-29T02:43:00 IST" name="verifyAddNews" description="Add new News in Manage news" finished-at="2025-09-29T02:43:03 IST" duration-ms="2782" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyloginwithValidUsernameInvalidpassword -->
-        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.LoginTest@40005471]" started-at="2025-09-28T00:28:05 IST" name="browserclose" finished-at="2025-09-28T00:28:05 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyAddNews -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.NewsTest@5bda8e08]" started-at="2025-09-29T02:43:03 IST" name="browserclose" finished-at="2025-09-29T02:43:03 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserclose -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@40005471]" started-at="2025-09-28T00:28:05 IST" name="driverQuit" finished-at="2025-09-28T00:28:05 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.NewsTest@5bda8e08]" started-at="2025-09-29T02:43:03 IST" name="driverQuit" finished-at="2025-09-29T02:43:03 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyloginwithValidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyloginwithValidUsernameInvalidpassword()[pri:2, instance:testscript.LoginTest@40005471] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAddNews status=SUCCESS method=NewsTest.verifyAddNews()[pri:0, instance:testscript.NewsTest@5bda8e08] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.NewsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
