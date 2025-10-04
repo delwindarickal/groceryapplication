@@ -25,7 +25,7 @@ public class LoginPage {
 		
 		//WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
 		//username.sendKeys(usernameValue);
-		waitUtility.waitUntilElementIsVisible(driver, username);
+		//waitUtility.waitUntilElementIsVisible(driver, username);
 		pageUtility.sendDataToElement(username, usernameValue);
 		
 	}
@@ -34,7 +34,7 @@ public class LoginPage {
 		
 		//WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
 		//password.sendKeys(passwordValue);
-		waitUtility.waitUntilElementIsVisible(driver, password);
+		//waitUtility.waitUntilElementIsVisible(driver, password);
 		pageUtility.sendDataToElement(password, passwordValue);
 	}
 	

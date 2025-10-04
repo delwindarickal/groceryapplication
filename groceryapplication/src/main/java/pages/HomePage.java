@@ -6,11 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class HomePage {
 	public WebDriver driver;
 	
 	PageUtility pageUtility=new PageUtility();
+	WaitUtility waitUtility = new WaitUtility();
 	
 	public HomePage(WebDriver driver) {
 		this.driver=driver;
@@ -29,6 +31,7 @@ public void admin_button() {
 public void logout_button() {
 	//WebElement logoutbutton=driver.findElement(By.xpath("//i[@class='ace-icon fa fa-power-off']"));
 	//logoutbutton.click();
+	waitUtility.waitUntilClickable(driver, logoutbutton);
 	pageUtility.clickOnElement(logoutbutton);
 }
 }

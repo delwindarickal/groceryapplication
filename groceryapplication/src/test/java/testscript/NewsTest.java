@@ -6,6 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.TestngBase;
+import constant.Constants;
+import constant.Messages;
 import pages.LoginPage;
 import pages.NewsPage;
 import utilities.ExcelUtility;
@@ -14,8 +16,8 @@ public class NewsTest extends TestngBase {
 	
 	@Test (description = "Add new News in Manage news")
 	public void verifyAddNews() throws IOException {
-		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");// 2nd row 1st coloumn- username
-		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");// 2nd row 2nd coloumn - password
+		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);// 2nd row 1st coloumn- username
+		String passwordValue=ExcelUtility.getStringData(1, 1, Constants.LOGINSHEET);// 2nd row 2nd coloumn - password
 		/*WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
 		username.sendKeys(usernameValue);
 		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
@@ -49,15 +51,15 @@ public class NewsTest extends TestngBase {
 		news.savenews();
 		
 		boolean isNewsAlertDisplayed = news.newsAlert();
-		Assert.assertTrue(isNewsAlertDisplayed,"The News is not added");
+		Assert.assertTrue(isNewsAlertDisplayed,Messages.NEWSALERT_ASSERT);
 		
 		
 		
 	}
 	@Test (description = "Return to home")
 	public void verifyReturntohome() throws IOException {
-		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");// 2nd row 1st coloumn- username
-		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");// 2nd row 2nd coloumn - password
+		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);// 2nd row 1st coloumn- username
+		String passwordValue=ExcelUtility.getStringData(1, 1, Constants.LOGINSHEET);// 2nd row 2nd coloumn - password
 		/*WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
 		username.sendKeys(usernameValue);
 		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
@@ -81,7 +83,7 @@ public class NewsTest extends TestngBase {
 		
 		String expected = "https://groceryapp.uniqassosiates.com/admin/home";
 		String actual = driver.getCurrentUrl();
-		Assert.assertEquals(actual, expected,"The page is not redirected to the home page from manage NewsS.");
+		Assert.assertEquals(actual, expected,Messages.RETURNHOMEFROMNEWS_ASSERT);
 		
 		
 		

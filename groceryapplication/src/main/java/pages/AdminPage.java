@@ -8,12 +8,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 //import org.openqa.selenium.support.ui.Select;
 
+import constant.Constants;
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class AdminPage {
 	public WebDriver driver;
 	
 	PageUtility pageUtility = new PageUtility();
+	WaitUtility waitUtility=new WaitUtility();
 	
 	public AdminPage(WebDriver driver) {
 	this.driver = driver;
@@ -51,7 +54,7 @@ public void userTypeDropdown() {
 	//WebElement newusertype =driver.findElement(By.xpath("//select[@id='user_type']"));
 	//Select select = new Select(newusertype);
 	//select.selectByVisibleText("Admin");
-	pageUtility.selectDataWithVisibleText(usertypedropdown, "admin");
+	pageUtility.selectDataWithVisibleText(usertypedropdown, Constants.ADMINUSER);
 }
 
 @FindBy(xpath = "//button[@name='Create']")WebElement usersave;
@@ -59,6 +62,7 @@ public void userSave() {
 	//WebElement usersave = driver.findElement(By.xpath("//button[@name='Create']"));
 	//usersave.click();
 	pageUtility.clickOnElement(usersave);
+	waitUtility.waitUntilClickable(driver, usersave);
 }
 
 @FindBy(xpath ="//div[@class='alert alert-success alert-dismissible']" )WebElement newAlert;
@@ -87,7 +91,7 @@ public void searchUserType() {
 	//WebElement searchusertype = driver.findElement(By.xpath("//select[@name='ut']"));
 	//Select select = new Select(searchusertype);
 	//select.selectByVisibleText("Admin");
-	pageUtility.selectDataWithVisibleText(searchusertype, "admin");
+	pageUtility.selectDataWithVisibleText(searchusertype, Constants.ADMINUSER);
 }
 
 @FindBy(xpath ="//button[@name='Search']" )WebElement searchuser;

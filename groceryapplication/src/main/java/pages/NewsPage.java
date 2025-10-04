@@ -6,11 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class NewsPage {
 	public WebDriver driver;
 	
 	PageUtility pageUtility=new PageUtility();
+	WaitUtility waitUtility=new WaitUtility();
 	
 	public NewsPage(WebDriver driver) {
 		this.driver=driver;
@@ -41,6 +43,7 @@ public class NewsPage {
 	public void savenews() {
 	//WebElement saveNews=driver.findElement(By.xpath("//button[@class='btn btn-danger']"));
 	//saveNews.click();
+		waitUtility.waitUntilClickable(driver, saveNews);
 		pageUtility.clickOnElement(saveNews);
 	}
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")WebElement newsalert;

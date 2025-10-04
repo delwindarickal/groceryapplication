@@ -8,11 +8,45 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,780</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">10</td><td class="num">0</td><td class="num attn">2</td><td class="num attn">2</td><td class="num">143,631</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscript.NewsTest</td><td><a href="#m0">verifyAddNews</a></td><td rowspan="1">1759093980688</td><td rowspan="1">2782</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscript.AdminTest</td><td><a href="#m0">verifyAddUser</a></td><td rowspan="1">1759468064000</td><td rowspan="1">10616</td></tr><tr class="failedodd"><td rowspan="1">testscript.LoginTest</td><td><a href="#m1">verifyloginwithValidCredentials</a></td><td rowspan="1">1759468139026</td><td rowspan="1">3513</td></tr><tr><th colspan="4">Test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="2">testscript.LoginTest</td><td><a href="#m2">verifyloginwithValidCredentials</a></td><td rowspan="2">1759468129974</td><td rowspan="2">2758</td></tr><tr class="retriedeven"><td><a href="#m3">verifyloginwithValidCredentials</a></td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testscript.AdminTest</td><td><a href="#m4">verifyRefreshbutton</a></td><td rowspan="1">1759468086912</td><td rowspan="1">3730</td></tr><tr class="passedeven"><td><a href="#m5">verifysearchuser</a></td><td rowspan="1">1759468078401</td><td rowspan="1">5357</td></tr><tr class="passedodd"><td rowspan="1">testscript.HomeTest</td><td><a href="#m6">verifylogout</a></td><td rowspan="1">1759468056963</td><td rowspan="1">3871</td></tr><tr class="passedeven"><td rowspan="5">testscript.LoginTest</td><td><a href="#m7">verifyloginwithInvalidCredentials</a></td><td rowspan="3">1759468164663</td><td rowspan="3">3337</td></tr><tr class="passedeven"><td><a href="#m8">verifyloginwithInvalidCredentials</a></td></tr><tr class="passedeven"><td><a href="#m9">verifyloginwithInvalidCredentials</a></td></tr><tr class="passedeven"><td><a href="#m10">verifyloginwithInvalidusernameValidPassword</a></td><td rowspan="1">1759468154619</td><td rowspan="1">2510</td></tr><tr class="passedeven"><td><a href="#m11">verifyloginwithValidUsernameInvalidpassword</a></td><td rowspan="1">1759468147571</td><td rowspan="1">2094</td></tr><tr class="passedodd"><td rowspan="2">testscript.NewsTest</td><td><a href="#m12">verifyAddNews</a></td><td rowspan="1">1759468096252</td><td rowspan="1">5087</td></tr><tr class="passedodd"><td><a href="#m13">verifyReturntohome</a></td><td rowspan="1">1759468105937</td><td rowspan="1">5981</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testscript.NewsTest#verifyAddNews</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testscript.AdminTest#verifyAddUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (e992baebed7c2c65b135919a98d4eeb6)] -&gt; xpath: //button[@name=&apos;Create&apos;]] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50426}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50426/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e992baebed7c2c65b135919a98d4eeb6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utilities.WaitUtility.waitUntilClickable(WaitUtility.java:16)
+	at pages.AdminPage.userSave(AdminPage.java:65)
+	at testscript.AdminTest.verifyAddUser(AdminTest.java:46)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testscript.LoginTest#verifyloginwithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Login is not successfull with valid credentials expected [https://groceryapp.uniqassosiates.com/admin/home] but found [https://groceryapp.uniqassosiates.com/admin]
+	at testscript.LoginTest.verifyloginwithValidCredentials(LoginTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testscript.LoginTest#verifyloginwithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Login is not successfull with valid credentials expected [https://groceryapp.uniqassosiates.com/admin/home] but found [https://groceryapp.uniqassosiates.com/admin]
+	at testscript.LoginTest.verifyloginwithValidCredentials(LoginTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testscript.LoginTest#verifyloginwithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Login is not successfull with valid credentials expected [https://groceryapp.uniqassosiates.com/admin/home] but found [https://groceryapp.uniqassosiates.com/admin]
+	at testscript.LoginTest.verifyloginwithValidCredentials(LoginTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testscript.AdminTest#verifyRefreshbutton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testscript.AdminTest#verifysearchuser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testscript.HomeTest#verifylogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testscript.LoginTest#verifyloginwithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>user</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testscript.LoginTest#verifyloginwithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>user1</td><td>password1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testscript.LoginTest#verifyloginwithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>username</td><td>pass</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testscript.LoginTest#verifyloginwithInvalidusernameValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testscript.LoginTest#verifyloginwithValidUsernameInvalidpassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">testscript.NewsTest#verifyAddNews</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">testscript.NewsTest#verifyReturntohome</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
