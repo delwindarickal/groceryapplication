@@ -13,6 +13,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class HomeTest extends TestngBase {
+	HomePage home;
 	@Test(description = "verify the logout")
 	public void verifylogout() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);// 2nd row 1st coloumn- username
@@ -26,18 +27,18 @@ public class HomeTest extends TestngBase {
 		
 		
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername(usernameValue);
-		login.enterPassword(passwordValue);
-		login.clickLogin();
+		login.enterUsername(usernameValue).enterPassword(passwordValue);
+		
+		home=login.clickLogin();
 		
 		/*WebElement adminbutton=driver.findElement(By.xpath("//img[@src='https://groceryapp.uniqassosiates.com/public/assets/admin/dist/img/avatar5.png']"));
 		adminbutton.click();
 		WebElement logoutbutton=driver.findElement(By.xpath("//i[@class='ace-icon fa fa-power-off']"));
 		logoutbutton.click();*/
 		
-		HomePage home=new HomePage(driver);
+		//HomePage home=new HomePage(driver);
 		home.admin_button();
-		home.logout_button();
+		login=home.logout_button();// To login
 		
 		String expected="https://groceryapp.uniqassosiates.com/admin/login";
 		String actual=driver.getCurrentUrl();

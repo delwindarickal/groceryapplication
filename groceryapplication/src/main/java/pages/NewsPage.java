@@ -18,33 +18,31 @@ public class NewsPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']")WebElement newsmoreinfo;
-	public void newsMoreInfo() {
-	//WebElement newsmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']"));
-	//newsmoreinfo.click();
-	pageUtility.clickOnElement(newsmoreinfo);	
-	}
+	
 	
 	@FindBy(xpath ="//a[@onclick='click_button(1)']" )WebElement add_newNews;
-	public void addNewNews() {
+	public NewsPage addNewNews() {
 		//WebElement add_newNews=driver.findElement(By.xpath("//a[@onclick='click_button(1)']"));
 		//add_newNews.click();
 		pageUtility.clickOnElement(add_newNews);
+		return this;
 	}
 	
 	@FindBy(xpath = "//textarea[@placeholder='Enter the news']")WebElement newNews;
-	public void newnews() {
+	public NewsPage newnews() {
 	//WebElement newNews=driver.findElement(By.xpath("//textarea[@placeholder='Enter the news']"));
 	//newNews.sendKeys("Sample News");
 		pageUtility.sendDataToElement(newNews, "Sample News");
+		return this;
 	}
 	
 	@FindBy(xpath ="//button[@class='btn btn-danger']" )WebElement saveNews;
-	public void savenews() {
+	public NewsPage savenews() {
 	//WebElement saveNews=driver.findElement(By.xpath("//button[@class='btn btn-danger']"));
 	//saveNews.click();
 		waitUtility.waitUntilClickable(driver, saveNews);
 		pageUtility.clickOnElement(saveNews);
+		return this;
 	}
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")WebElement newsalert;
 	public boolean newsAlert() {
@@ -54,9 +52,10 @@ public class NewsPage {
 	}
 	
 	@FindBy(xpath ="//a[text()='Home']" )WebElement returntohome;
-	public void returntoHome() {
+	public HomePage returntoHome() {
 	//WebElement returntohome=driver.findElement(By.xpath("//a[text()='Home']"));
 	//returntohome.click();
 	pageUtility.clickOnElement(returntohome);
+	return new HomePage(driver);
 	}
 }

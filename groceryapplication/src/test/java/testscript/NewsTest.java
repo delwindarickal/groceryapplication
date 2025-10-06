@@ -8,11 +8,14 @@ import org.testng.annotations.Test;
 import base.TestngBase;
 import constant.Constants;
 import constant.Messages;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.NewsPage;
 import utilities.ExcelUtility;
 
 public class NewsTest extends TestngBase {
+	NewsPage news;
+	HomePage home;
 	
 	@Test (description = "Add new News in Manage news")
 	public void verifyAddNews() throws IOException {
@@ -26,9 +29,9 @@ public class NewsTest extends TestngBase {
 		loginbutton.click();*/
 		
 		LoginPage login=new LoginPage(driver);
-		login.enterUsername(usernameValue);
-		login.enterPassword(passwordValue);
-		login.clickLogin();
+		login.enterUsername(usernameValue).enterPassword(passwordValue);
+		
+		home=login.clickLogin();
 		
 		/*WebElement newsmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']"));
 		newsmoreinfo.click();
@@ -44,11 +47,9 @@ public class NewsTest extends TestngBase {
 		boolean isNewsAlertDisplayed = newsalert.isDisplayed();*/
 		
 		NewsPage news=new NewsPage(driver);
-		news.newsMoreInfo();
-		news.addNewNews();
-		
-		news.newnews();
-		news.savenews();
+		home.newsMoreInfo();
+		news.addNewNews().newnews().savenews();
+	
 		
 		boolean isNewsAlertDisplayed = news.newsAlert();
 		Assert.assertTrue(isNewsAlertDisplayed,Messages.NEWSALERT_ASSERT);
@@ -67,19 +68,19 @@ public class NewsTest extends TestngBase {
 		WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
 		loginbutton.click();*/
 		LoginPage login=new LoginPage(driver);
-		login.enterUsername(usernameValue);
-		login.enterPassword(passwordValue);
-		login.clickLogin();
+		login.enterUsername(usernameValue).enterPassword(passwordValue);
+		
+		home=login.clickLogin();
 		
 	//	WebElement newsmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']"));
 		//newsmoreinfo.click();
 		
-		NewsPage news=new NewsPage(driver);
-		news.newsMoreInfo();
+		//NewsPage news=new NewsPage(driver);
+		home.newsMoreInfo();
 		
 		//WebElement returntohome=driver.findElement(By.xpath("//a[text()='Home']"));
 		//returntohome.click();
-		news.returntoHome();
+		home=news.returntoHome();
 		
 		String expected = "https://groceryapp.uniqassosiates.com/admin/home";
 		String actual = driver.getCurrentUrl();

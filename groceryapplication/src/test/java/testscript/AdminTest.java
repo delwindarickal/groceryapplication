@@ -12,12 +12,15 @@ import base.TestngBase;
 import constant.Constants;
 import constant.Messages;
 import pages.AdminPage;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class AdminTest extends TestngBase {
 	
+	HomePage home;
+	AdminPage admin;
 	@Test( priority=1, description = "Add new User" )
 	public void verifyAddUser() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);// 2nd row 1st coloumn- username
@@ -29,9 +32,9 @@ public class AdminTest extends TestngBase {
 		WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
 		loginbutton.click();*/
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername(usernameValue);
-		login.enterPassword(passwordValue);
-		login.clickLogin();
+		login.enterUsername(usernameValue).enterPassword(passwordValue);
+		
+		home=login.clickLogin();
 		
 		FakerUtility fakerUtility = new FakerUtility();
 		String randomname=fakerUtility.createRandomUserName();
@@ -39,12 +42,9 @@ public class AdminTest extends TestngBase {
 		
 		//String usertype=ExcelUtility.getStringData(1,2, "HomePage");
 		AdminPage admin = new AdminPage(driver);
-		admin.adminMoreInfo();;
-		admin.addnewuser();
-		admin.addNewUsername(randomname);
-		admin.enterNewPassword(randompassword);
-		admin.userTypeDropdown();
-		admin.userSave();
+		admin=home.adminMoreInfo();;
+		admin.addnewuser().addNewUsername(randomname).enterNewPassword(randompassword).userTypeDropdown().userSave();
+		
 		/*WebElement adminmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']"));
 		adminmoreinfo.click();
 		
@@ -85,9 +85,9 @@ public class AdminTest extends TestngBase {
 		WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
 		loginbutton.click();*/
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername(usernameValue);
-		login.enterPassword(passwordValue);
-		login.clickLogin();
+		login.enterUsername(usernameValue).enterPassword(passwordValue);
+		
+		home=login.clickLogin();
 		
 		
 		
@@ -116,11 +116,9 @@ public class AdminTest extends TestngBase {
 		
 		
 		AdminPage admin = new AdminPage(driver);
-		admin.adminMoreInfo();
-		admin.searchButton();
-		admin.searchUserName(randomname);
-		admin.searchUserType();
-		admin.searchUser();
+		home.adminMoreInfo();
+		admin.searchButton().searchUserName(randomname).searchUserType().searchUser();
+		
 		
 		//WebElement newsAlert= driver.findElement(By.xpath("//h4[@class=\"card-title\" and text() ='Admin Users']"));
 		
@@ -153,14 +151,12 @@ public class AdminTest extends TestngBase {
 		WebElement reset_button = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-warning']"));
 		reset_button.click();*/
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername(usernameValue);
-		login.enterPassword(passwordValue);
-		login.clickLogin();
+		login.enterUsername(usernameValue).enterPassword(passwordValue);
+		home=login.clickLogin();
 		
 		AdminPage admin = new AdminPage(driver);
-		admin.adminMoreInfo();
-		admin.searchButton();;
-		admin.reset();
+		home.adminMoreInfo();
+		admin.searchButton().reset();
 		
 		String expected="https://groceryapp.uniqassosiates.com/admin/list-admin";
 		String actual=driver.getCurrentUrl();

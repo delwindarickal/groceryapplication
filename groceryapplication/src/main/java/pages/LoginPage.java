@@ -21,29 +21,32 @@ public class LoginPage {
 	
 	}
 	@FindBy(xpath="//input[@name='username']")WebElement username;
-	public void enterUsername(String usernameValue) {
+	public LoginPage enterUsername(String usernameValue) {
 		
 		//WebElement username= driver.findElement(By.xpath("//input[@name='username']"));
 		//username.sendKeys(usernameValue);
 		//waitUtility.waitUntilElementIsVisible(driver, username);
 		pageUtility.sendDataToElement(username, usernameValue);
+		return this;
 		
 	}
 	@FindBy(xpath ="//input[@name='password']" ) WebElement password;
-	public void enterPassword(String passwordValue) {
+	public LoginPage enterPassword(String passwordValue) {
 		
 		//WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
 		//password.sendKeys(passwordValue);
 		//waitUtility.waitUntilElementIsVisible(driver, password);
 		pageUtility.sendDataToElement(password, passwordValue);
+		return this;
 	}
 	
 	@FindBy(xpath = "//button[@class='btn btn-dark btn-block\']" )WebElement loginbutton;
-	public void clickLogin() {
+	public HomePage clickLogin() {// if valid credential the home page should be returned
 		//WebElement loginbutton=driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block\']"));
 		//loginbutton.click();
 		waitUtility.waitUntilClickable(driver, loginbutton);
 		pageUtility.clickOnElement(loginbutton);
+		return new HomePage(driver); // not current class
 	}
 	
 
