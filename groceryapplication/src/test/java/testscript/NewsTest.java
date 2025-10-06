@@ -77,7 +77,7 @@ public class NewsTest extends TestngBase {
 		
 		//NewsPage news=new NewsPage(driver);
 		home.newsMoreInfo();
-		
+		 
 		//WebElement returntohome=driver.findElement(By.xpath("//a[text()='Home']"));
 		//returntohome.click();
 		home=news.returntoHome();

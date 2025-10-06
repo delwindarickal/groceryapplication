@@ -102,7 +102,7 @@ public AdminPage searchUser() {
 	//WebElement searchuser = driver.findElement(By.xpath("//button[@name='Search']"));
 	//searchuser.click();
 	pageUtility.clickOnElement(searchuser);
-	return this;
+	return this; 
 	
 }
 

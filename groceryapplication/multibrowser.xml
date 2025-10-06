@@ -6,7 +6,7 @@
 </listeners>
    <test thread-count="5" name="Chrome Test">
   <parameter name="browser" value="chrome"></parameter>
-    <classes>
+    <classes> 
       <class name="testscript.HomeTest"/>
       <class name="testscript.LoginTest"/>
       <!--<class name="testscript.AdminTest"/>

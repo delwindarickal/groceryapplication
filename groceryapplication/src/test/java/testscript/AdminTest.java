@@ -16,7 +16,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 import utilities.FakerUtility;
-
+  
 public class AdminTest extends TestngBase {
 	
 	HomePage home;

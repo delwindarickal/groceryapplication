@@ -11,7 +11,7 @@
       <!--<class name="testscript.AdminTest"/>
       <class name="testscript.NewsTest"/>
       <class name="testscript.LoginTest"/> -->
-      </classes>
+      </classes> 
   </test> <!-- Test -->
     <test thread-count="5" name="Firefox Test">
   <parameter name="browser" value="firefox"></parameter>

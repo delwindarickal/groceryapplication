@@ -52,7 +52,7 @@ public class NewsPage {
 	}
 	
 	@FindBy(xpath ="//a[text()='Home']" )WebElement returntohome;
-	public HomePage returntoHome() {
+	public HomePage returntoHome() { 
 	//WebElement returntohome=driver.findElement(By.xpath("//a[text()='Home']"));
 	//returntohome.click();
 	pageUtility.clickOnElement(returntohome);

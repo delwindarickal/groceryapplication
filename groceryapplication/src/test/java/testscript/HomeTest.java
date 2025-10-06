@@ -29,7 +29,7 @@ public class HomeTest extends TestngBase {
 		LoginPage login = new LoginPage(driver);
 		login.enterUsername(usernameValue).enterPassword(passwordValue);
 		
-		home=login.clickLogin();
+		home=login.clickLogin();  
 		
 		/*WebElement adminbutton=driver.findElement(By.xpath("//img[@src='https://groceryapp.uniqassosiates.com/public/assets/admin/dist/img/avatar5.png']"));
 		adminbutton.click();

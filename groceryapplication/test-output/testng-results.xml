@@ -1,120 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-06T17:44:53 IST" name="Default suite" finished-at="2025-10-06T17:44:53 IST" duration-ms="103">
+  <suite started-at="2025-10-06T17:49:59 IST" name="parallel " finished-at="2025-10-06T17:50:19 IST" duration-ms="20368">
     <groups>
     </groups>
-    <test started-at="2025-10-06T17:44:53 IST" name="Default test" finished-at="2025-10-06T17:44:53 IST" duration-ms="103">
-      <class name="testscript.NewsTest">
-        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.NewsTest@489115ef]" started-at="2025-10-06T17:44:53 IST" name="intializebrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1759752893659" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method intializebrowser but has not been marked @Optional or defined
-in C:\Users\user\AppData\Local\Temp\testng-eclipse-1675147105\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method intializebrowser but has not been marked @Optional or defined
-in C:\Users\user\AppData\Local\Temp\testng-eclipse-1675147105\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializebrowser -->
-        <test-method signature="verifyReturntohome()[pri:0, instance:testscript.NewsTest@489115ef]" started-at="2025-10-06T17:44:53 IST" name="verifyReturntohome" description="Return to home" finished-at="2025-10-06T17:44:53 IST" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method intializebrowser but has not been marked @Optional or defined
-in C:\Users\user\AppData\Local\Temp\testng-eclipse-1675147105\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method intializebrowser but has not been marked @Optional or defined
-in C:\Users\user\AppData\Local\Temp\testng-eclipse-1675147105\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyReturntohome -->
-        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.NewsTest@489115ef]" started-at="2025-10-06T17:44:53 IST" name="browserclose" finished-at="2025-10-06T17:44:53 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserclose -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.NewsTest@489115ef]" started-at="2025-10-06T17:44:53 IST" name="driverQuit" finished-at="2025-10-06T17:44:53 IST" duration-ms="3" status="PASS">
+    <test started-at="2025-10-06T17:49:59 IST" name="Test" finished-at="2025-10-06T17:50:19 IST" duration-ms="20368">
+      <class name="testscript.HomeTest">
+        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.HomeTest@6bb4dd34]" started-at="2025-10-06T17:49:59 IST" name="intializebrowser" finished-at="2025-10-06T17:50:13 IST" duration-ms="14020" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyReturntohome status=SKIP method=NewsTest.verifyReturntohome()[pri:0, instance:testscript.NewsTest@489115ef] output={null}]]]>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializebrowser -->
+        <test-method signature="verifylogout()[pri:0, instance:testscript.HomeTest@6bb4dd34]" started-at="2025-10-06T17:50:13 IST" name="verifylogout" description="verify the logout" finished-at="2025-10-06T17:50:19 IST" duration-ms="6272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifylogout -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.HomeTest@6bb4dd34]" started-at="2025-10-06T17:50:19 IST" name="browserclose" finished-at="2025-10-06T17:50:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.HomeTest@6bb4dd34]" started-at="2025-10-06T17:50:19 IST" name="driverQuit" finished-at="2025-10-06T17:50:19 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifylogout status=SUCCESS method=HomeTest.verifylogout()[pri:0, instance:testscript.HomeTest@6bb4dd34] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscript.NewsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testscript.HomeTest -->
+      <class name="testscript.AdminTest">
+        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:49:59 IST" name="intializebrowser" finished-at="2025-10-06T17:50:12 IST" duration-ms="13190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializebrowser -->
+        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:49:59 IST" name="intializebrowser" finished-at="2025-10-06T17:50:12 IST" duration-ms="13174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializebrowser -->
+        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:49:59 IST" name="intializebrowser" finished-at="2025-10-06T17:50:12 IST" duration-ms="13174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializebrowser -->
+        <test-method signature="verifyAddUser()[pri:1, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:12 IST" name="verifyAddUser" description="Add new User" finished-at="2025-10-06T17:50:13 IST" duration-ms="960" status="FAIL">
+          <exception class="org.apache.poi.EmptyFileException">
+            <message>
+              <![CDATA[The supplied file was empty (zero bytes long)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.apache.poi.EmptyFileException: The supplied file was empty (zero bytes long)
+at org.apache.poi.util.IOUtils.peekFirstNBytes(IOUtils.java:149)
+at org.apache.poi.poifs.filesystem.FileMagic.valueOf(FileMagic.java:209)
+at org.apache.poi.openxml4j.opc.internal.ZipHelper.verifyZipHeader(ZipHelper.java:144)
+at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:188)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:156)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
+at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
+at testscript.AdminTest.verifyAddUser(AdminTest.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.apache.poi.EmptyFileException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddUser -->
+        <test-method signature="verifyRefreshbutton()[pri:3, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:12 IST" name="verifyRefreshbutton" description="Refresh button" finished-at="2025-10-06T17:50:13 IST" duration-ms="1052" status="FAIL">
+          <exception class="java.io.IOException">
+            <message>
+              <![CDATA[Stream Closed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.IOException: Stream Closed
+at java.base/java.io.FileInputStream.available0(Native Method)
+at java.base/java.io.FileInputStream.available(FileInputStream.java:494)
+at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
+at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.realSkip(ZipArchiveInputStream.java:1324)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.isApkSigningBlock(ZipArchiveInputStream.java:929)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:765)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:150)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:157)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
+at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
+at testscript.AdminTest.verifyRefreshbutton(AdminTest.java:136)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.IOException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRefreshbutton -->
+        <test-method signature="verifysearchuser()[pri:2, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:12 IST" name="verifysearchuser" description="search the user" finished-at="2025-10-06T17:50:13 IST" duration-ms="1256" status="FAIL">
+          <exception class="java.io.IOException">
+            <message>
+              <![CDATA[Stream Closed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.IOException: Stream Closed
+at java.base/java.io.FileInputStream.available0(Native Method)
+at java.base/java.io.FileInputStream.available(FileInputStream.java:494)
+at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
+at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:627)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:1146)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:1098)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:1028)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:78)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:245)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:208)
+at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.<init>(ZipArchiveFakeEntry.java:83)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:98)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:157)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
+at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
+at testscript.AdminTest.verifysearchuser(AdminTest.java:79)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.IOException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifysearchuser -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="browserclose" finished-at="2025-10-06T17:50:13 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="driverQuit" finished-at="2025-10-06T17:50:14 IST" duration-ms="695" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddUser status=FAILURE method=AdminTest.verifyAddUser()[pri:1, instance:testscript.AdminTest@6ca18a14] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="browserclose" finished-at="2025-10-06T17:50:13 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="driverQuit" finished-at="2025-10-06T17:50:13 IST" duration-ms="366" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRefreshbutton status=FAILURE method=AdminTest.verifyRefreshbutton()[pri:3, instance:testscript.AdminTest@6ca18a14] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="browserclose" finished-at="2025-10-06T17:50:13 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="driverQuit" finished-at="2025-10-06T17:50:14 IST" duration-ms="635" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifysearchuser status=FAILURE method=AdminTest.verifysearchuser()[pri:2, instance:testscript.AdminTest@6ca18a14] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscript.AdminTest -->
+    </test> <!-- Test -->
+  </suite> <!-- parallel  -->
 </testng-results>

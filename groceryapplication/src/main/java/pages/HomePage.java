@@ -49,6 +49,6 @@ public NewsPage newsMoreInfo() {
 //WebElement newsmoreinfo=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']"));
 //newsmoreinfo.click();
 pageUtility.clickOnElement(newsmoreinfo);	
-return new NewsPage(driver);
+return new NewsPage(driver); 
 }
 }
