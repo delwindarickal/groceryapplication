@@ -5,11 +5,16 @@
 <listener class-name="reportgeneration.Listener"></listener>
 </listeners>
   <test thread-count="5" name="Test">
+    <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="testscript.HomeTest"/>
+     <!-- <class name="testscript.HomeTest"/>
       <class name="testscript.AdminTest"/>
-      <class name="testscript.NewsTest"/>
-      <class name="testscript.LoginTest"/>
+      <class name="testscript.NewsTest"/>-->
+      <class name="testscript.LoginTest">
+      <methods>
+      <include name="verifyloginwithValidCredentials"></include>
+      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

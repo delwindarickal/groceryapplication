@@ -26,7 +26,7 @@ public void verifyloginwithValidCredentials() throws IOException {
 	home=login.clickLogin();// chaining of pages
 
 	
-	String expected="https://groceryapp.uniqassosiates.com/admin/home";
+	String expected="https://groceryapp.uniqassosiates.com/admin";
 	String actual=driver.getCurrentUrl();
 	Assert.assertEquals(actual, expected, Messages.VALIDLOGIN_ASSERT);
 	

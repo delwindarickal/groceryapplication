@@ -5,23 +5,16 @@
     <listener class-name="reportgeneration.Listener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="testscript.LoginTest">
         <methods>
           <include name="driverQuit"/>
-          <include name="browserclose"/>
           <include name="verifyloginwithValidCredentials"/>
+          <include name="browserclose"/>
           <include name="intializebrowser"/>
         </methods>
       </class> <!-- testscript.LoginTest -->
-      <class name="testscript.AdminTest">
-        <methods>
-          <include name="driverQuit"/>
-          <include name="browserclose"/>
-          <include name="verifyAddUser"/>
-          <include name="intializebrowser"/>
-        </methods>
-      </class> <!-- testscript.AdminTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

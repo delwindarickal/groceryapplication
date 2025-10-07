@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
+<testng-results retried="2" ignored="2" total="5" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-06T17:49:59 IST" name="parallel " finished-at="2025-10-06T17:50:19 IST" duration-ms="20368">
+  <suite started-at="2025-10-07T11:03:44 IST" name="Suite" finished-at="2025-10-07T11:04:27 IST" duration-ms="42985">
     <groups>
+      <group name="smoke">
+        <method signature="LoginTest.verifyloginwithValidCredentials()[pri:1, instance:testscript.LoginTest@76b07f29]" name="verifyloginwithValidCredentials" class="testscript.LoginTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-10-06T17:49:59 IST" name="Test" finished-at="2025-10-06T17:50:19 IST" duration-ms="20368">
-      <class name="testscript.HomeTest">
-        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.HomeTest@6bb4dd34]" started-at="2025-10-06T17:49:59 IST" name="intializebrowser" finished-at="2025-10-06T17:50:13 IST" duration-ms="14020" status="PASS">
+    <test started-at="2025-10-07T11:03:44 IST" name="Test" finished-at="2025-10-07T11:04:27 IST" duration-ms="42985">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:03:45 IST" name="intializebrowser" finished-at="2025-10-07T11:03:58 IST" duration-ms="13270" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,78 +21,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializebrowser -->
-        <test-method signature="verifylogout()[pri:0, instance:testscript.HomeTest@6bb4dd34]" started-at="2025-10-06T17:50:13 IST" name="verifylogout" description="verify the logout" finished-at="2025-10-06T17:50:19 IST" duration-ms="6272" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifylogout -->
-        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.HomeTest@6bb4dd34]" started-at="2025-10-06T17:50:19 IST" name="browserclose" finished-at="2025-10-06T17:50:19 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserclose -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.HomeTest@6bb4dd34]" started-at="2025-10-06T17:50:19 IST" name="driverQuit" finished-at="2025-10-06T17:50:19 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifylogout status=SUCCESS method=HomeTest.verifylogout()[pri:0, instance:testscript.HomeTest@6bb4dd34] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testscript.HomeTest -->
-      <class name="testscript.AdminTest">
-        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:49:59 IST" name="intializebrowser" finished-at="2025-10-06T17:50:12 IST" duration-ms="13190" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializebrowser -->
-        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:49:59 IST" name="intializebrowser" finished-at="2025-10-06T17:50:12 IST" duration-ms="13174" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializebrowser -->
-        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:49:59 IST" name="intializebrowser" finished-at="2025-10-06T17:50:12 IST" duration-ms="13174" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializebrowser -->
-        <test-method signature="verifyAddUser()[pri:1, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:12 IST" name="verifyAddUser" description="Add new User" finished-at="2025-10-06T17:50:13 IST" duration-ms="960" status="FAIL">
-          <exception class="org.apache.poi.EmptyFileException">
+        <test-method retried="true" signature="verifyloginwithValidCredentials()[pri:1, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:03:58 IST" name="verifyloginwithValidCredentials" description="verify login with valid credentials" finished-at="2025-10-07T11:04:05 IST" duration-ms="7450" status="SKIP">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The supplied file was empty (zero bytes long)]]>
+              <![CDATA[Login is not successfull with valid credentials expected [https://groceryapp.uniqassosiates.com/admin/home] but found [https://groceryapp.uniqassosiates.com/admin]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.apache.poi.EmptyFileException: The supplied file was empty (zero bytes long)
-at org.apache.poi.util.IOUtils.peekFirstNBytes(IOUtils.java:149)
-at org.apache.poi.poifs.filesystem.FileMagic.valueOf(FileMagic.java:209)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.verifyZipHeader(ZipHelper.java:144)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:188)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:156)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-at testscript.AdminTest.verifyAddUser(AdminTest.java:26)
+              <![CDATA[java.lang.AssertionError: Login is not successfull with valid credentials expected [https://groceryapp.uniqassosiates.com/admin/home] but found [https://groceryapp.uniqassosiates.com/admin]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscript.LoginTest.verifyloginwithValidCredentials(LoginTest.java:31)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -100,164 +44,210 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1575)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.apache.poi.EmptyFileException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddUser -->
-        <test-method signature="verifyRefreshbutton()[pri:3, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:12 IST" name="verifyRefreshbutton" description="Refresh button" finished-at="2025-10-06T17:50:13 IST" duration-ms="1052" status="FAIL">
-          <exception class="java.io.IOException">
+        </test-method> <!-- verifyloginwithValidCredentials -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:05 IST" name="browserclose" finished-at="2025-10-07T11:04:05 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:05 IST" name="driverQuit" finished-at="2025-10-07T11:04:05 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyloginwithValidCredentials status=SKIP method=LoginTest.verifyloginwithValidCredentials()[pri:1, instance:testscript.LoginTest@76b07f29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:05 IST" name="intializebrowser" finished-at="2025-10-07T11:04:13 IST" duration-ms="7137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializebrowser -->
+        <test-method retried="true" signature="verifyloginwithValidCredentials()[pri:1, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:13 IST" name="verifyloginwithValidCredentials" description="verify login with valid credentials" finished-at="2025-10-07T11:04:17 IST" duration-ms="4471" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[Stream Closed]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=140.0.7339.208)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [833461f053a8e993269efe7a4fcbb481, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52350}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52350/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 833461f053a8e993269efe7a4fcbb481]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.IOException: Stream Closed
-at java.base/java.io.FileInputStream.available0(Native Method)
-at java.base/java.io.FileInputStream.available(FileInputStream.java:494)
-at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
-at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
-at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.realSkip(ZipArchiveInputStream.java:1324)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.isApkSigningBlock(ZipArchiveInputStream.java:929)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:765)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:150)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:157)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-at testscript.AdminTest.verifyRefreshbutton(AdminTest.java:136)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=140.0.7339.208)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [833461f053a8e993269efe7a4fcbb481, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52350}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52350/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 833461f053a8e993269efe7a4fcbb481
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:325)
+at testscript.LoginTest.verifyloginwithValidCredentials(LoginTest.java:30)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1575)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.IOException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyRefreshbutton -->
-        <test-method signature="verifysearchuser()[pri:2, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:12 IST" name="verifysearchuser" description="search the user" finished-at="2025-10-06T17:50:13 IST" duration-ms="1256" status="FAIL">
-          <exception class="java.io.IOException">
+        </test-method> <!-- verifyloginwithValidCredentials -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:17 IST" name="browserclose" finished-at="2025-10-07T11:04:17 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:17 IST" name="driverQuit" finished-at="2025-10-07T11:04:17 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyloginwithValidCredentials status=SKIP method=LoginTest.verifyloginwithValidCredentials()[pri:1, instance:testscript.LoginTest@76b07f29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="intializebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:17 IST" name="intializebrowser" finished-at="2025-10-07T11:04:23 IST" duration-ms="6457" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializebrowser -->
+        <test-method signature="verifyloginwithValidCredentials()[pri:1, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:23 IST" name="verifyloginwithValidCredentials" description="verify login with valid credentials" finished-at="2025-10-07T11:04:27 IST" duration-ms="3165" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Stream Closed]]>
+              <![CDATA[Login is not successfull with valid credentials expected [https://groceryapp.uniqassosiates.com/admin/home] but found [https://groceryapp.uniqassosiates.com/admin]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.IOException: Stream Closed
-at java.base/java.io.FileInputStream.available0(Native Method)
-at java.base/java.io.FileInputStream.available(FileInputStream.java:494)
-at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
-at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
-at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
-at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:627)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:1146)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:1098)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:1028)
-at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:78)
-at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:245)
-at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:208)
-at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.<init>(ZipArchiveFakeEntry.java:83)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:98)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:157)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:25)
-at testscript.AdminTest.verifysearchuser(AdminTest.java:79)
+              <![CDATA[java.lang.AssertionError: Login is not successfull with valid credentials expected [https://groceryapp.uniqassosiates.com/admin/home] but found [https://groceryapp.uniqassosiates.com/admin]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscript.LoginTest.verifyloginwithValidCredentials(LoginTest.java:31)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1575)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.IOException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifysearchuser -->
-        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="browserclose" finished-at="2025-10-06T17:50:13 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- verifyloginwithValidCredentials -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:27 IST" name="browserclose" finished-at="2025-10-07T11:04:27 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserclose -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="driverQuit" finished-at="2025-10-06T17:50:14 IST" duration-ms="695" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@76b07f29]" started-at="2025-10-07T11:04:27 IST" name="driverQuit" finished-at="2025-10-07T11:04:27 IST" duration-ms="648" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddUser status=FAILURE method=AdminTest.verifyAddUser()[pri:1, instance:testscript.AdminTest@6ca18a14] output={null}]]]>
+                <![CDATA[[TestResult name=verifyloginwithValidCredentials status=FAILURE method=LoginTest.verifyloginwithValidCredentials()[pri:1, instance:testscript.LoginTest@76b07f29] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="browserclose" finished-at="2025-10-06T17:50:13 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserclose -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="driverQuit" finished-at="2025-10-06T17:50:13 IST" duration-ms="366" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyRefreshbutton status=FAILURE method=AdminTest.verifyRefreshbutton()[pri:3, instance:testscript.AdminTest@6ca18a14] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="browserclose()[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="browserclose" finished-at="2025-10-06T17:50:13 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserclose -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminTest@6ca18a14]" started-at="2025-10-06T17:50:13 IST" name="driverQuit" finished-at="2025-10-06T17:50:14 IST" duration-ms="635" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifysearchuser status=FAILURE method=AdminTest.verifysearchuser()[pri:2, instance:testscript.AdminTest@6ca18a14] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testscript.AdminTest -->
+      </class> <!-- testscript.LoginTest -->
     </test> <!-- Test -->
-  </suite> <!-- parallel  -->
+  </suite> <!-- Suite -->
 </testng-results>
